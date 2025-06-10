@@ -13,15 +13,19 @@ document.addEventListener("DOMContentLoaded", () => {
       historyList.innerHTML = "";
       items.forEach(item => {
         const li = document.createElement("li");
-        li.textContent = item;
+        //li.textContent = item; shows the item e.g. [object, Object]
+        li.textContent = item.text;
         historyList.appendChild(li);
       });
     }
   
-    renderHistory(sampleHistory);
+    chrome.storage.local.get({ history: [] }, (result) => {
+        renderHistory(result.history);
+      });    
   
-    clearBtn.addEventListener("click", () => {
-      historyList.innerHTML = "";
+      clearBtn.addEventListener("click", () => {
+        chrome.storage.local.set({ history: [] }, () => {
+          historyList.innerHTML = "";
+        });
+      });
     });
-  });
-  

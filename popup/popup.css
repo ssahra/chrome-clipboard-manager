@@ -6,6 +6,7 @@ body {
     padding: 10px;
     background-color: #f9f9f9;
     overflow-y: auto;
+    border-radius: 10px;
   }
   
   header {
