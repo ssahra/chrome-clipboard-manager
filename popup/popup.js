@@ -16,17 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       items.forEach((item, index) => {
         const li = document.createElement("li");
-        //li.textContent = item; shows the item e.g. [object, Object]
-        //li.textContent = item.text;
-
-        //const textSpan = document.createElement("span");
-        //const previewText = item.text.substring(0, 50);
-        //textSpan.textContent = previewText;
-
-        //if item.text > 50 characters: (const previewText = item.text.substring(0, 50);
-        //textSpan.textContent = previewText;)
-        // else (const textSpan = document.createElement("span");
-        //textSpan.textContent = item.text;)
+        
         const textSpan = document.createElement("span");
         const copiedText = item.text;
         if (copiedText.length > 50) {
