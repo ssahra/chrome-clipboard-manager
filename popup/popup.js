@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       items.forEach((item, index) => {
         const li = document.createElement("li");
-        
+
         const textSpan = document.createElement("span");
         const copiedText = item.text;
         if (copiedText.length > 50) {
-          const previewText = copiedText.substring(0, 50) + "...";
+          const previewText = copiedText.substring(0, 100) + "...";
           textSpan.textContent = previewText;
         }
         else {

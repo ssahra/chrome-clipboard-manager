@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Clipboard Manager",
-    "description": "Save and everything you copy.",
+    "description": "Save everything you copy.",
     "version": "1.0",
     "action": {
       "default_popup": "popup/popup.html",
